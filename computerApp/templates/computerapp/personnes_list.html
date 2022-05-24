@@ -1,0 +1,21 @@
+{% extends "index.html" %}
+
+{% block title %}
+<title> liste_personnes </title>
+{% endblock %}
+
+{% block content %} 
+   <h1>Liste des Personnes</h1>
+   {% if persos %} 
+   <ul>
+     {% for Personne in persos  %}
+      <li>
+         <a href="{% url 'persos-detail' Personne.num_secu %}">
+         {{ Personne.num_secu }} ({{Personne.nom}}) {{Personne.prenom}}
+      </li>
+    {% endfor %} 
+   </ul>
+   {% else %} 
+      <p>Il n'y a pas de Personnel.</p>
+   {% endif %} 
+{% endblock %} 
