@@ -8,6 +8,6 @@ class AddMachineForm(forms.Form) :
     def clean_nom(self):
         data = self.cleaned_data["nom"]
         if len(data) != 6:
-            raise ValidationError(_("Erreur de format pour le champ nom"))
+            raise ValidationError(("Erreur de format pour le champ nom"))
 
         return

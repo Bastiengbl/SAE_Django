@@ -1,11 +1,27 @@
 {% extends "index.html" %}
-
+<body >
+    {% block menu %}
+    <h1>R&T Dev</h1>
+       {% block sidebar %} 
+          <h2> Menu</h2>
+          <ul id="menu">
+             <li><a href="{% url 'index' %}">Home</a></li>
+             <li><a href="{% url 'machines' %}">Machines</a></li>
+             <li><a href="{% url 'persos' %}">Personnel</a></li>
+             
+          </ul>
+       {% endblock %} 
+    {% endblock %}
+       <!-- On ajoute les images ici depuis les statics-->
+       {% load static %} 
+    <img src="{% static 'computerapp/images/logo_200px.png' %}"
+    alt="logo" style="width:200px;height:200px;">
+    <img src="{% static 'computerapp/images/logo2_200px.png' %}"
+    alt="logo2" style="width:200px;height:200px;">
 {% block content %}
-    <h1>Nom: {{ machine.name }}</h1>
-
-    <p><strong>Id</strong> : {{ machine.id }}</a></p>
-    <p><strong>Date de maintenance :
-    </strong>{{machine.maintenanceDate}}</p>
-    <p><strong>Machine :    
-    </strong> {{ machine.mach }}</p>
+<form method="post">
+{% csrf_token %}
+{{ form.nom }}
+<input type="submit" value="Submit">
+</form>
 {% endblock %}

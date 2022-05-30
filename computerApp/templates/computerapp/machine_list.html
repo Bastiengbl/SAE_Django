@@ -1,11 +1,13 @@
 {% extends "index.html" %}
 
 {% block title %}
-<title> LOOOOL </title>
+<title> Liste des Machines </title>
 {% endblock %}
 
 {% block content %} 
    <h1>Liste des machines</h1>
+   
+
    {% if machines %} 
    <ul>
      {% for machine in machines %}
@@ -13,8 +15,14 @@
          <a href="{% url 'machine-detail' machine.id %}">
          {{ machine.id }} ({{machine.nom}})
       </li>
-    {% endfor %} 
+    {% endfor %}  
    </ul>
+ 
+   
+   <li><a href="{% url 'add-machine' %}">Ajouter une machine2</a></li>
+   
+   
+
    {% else %} 
       <p>Il n'y a pas de machine.</p>
    {% endif %} 
