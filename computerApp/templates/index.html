@@ -1,5 +1,6 @@
 <!DOCTYPE html >
 <html lang="fr">
+
  <head> 
       {% block title %}
       <title> ACCUEIL </title>
@@ -14,29 +15,39 @@
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
    </head >
-   <body >
+   <body style="background-color:#93BBEE">
+      
       {% block menu %}
-      <h1>R&T Dev</h1>
+      <!-- On ajoute une image depuis les static -->
+      {% load static %} 
+      <img src="{% static 'computerapp/images/rtdev.png' %}"
+      alt="logo" style="background-color:#93BBEE;width:500px;height:200px;position:relative;left: 550px">
          {% block sidebar %} 
-            <h2> Menu</h2>
-            <ul id="menu">
-               <li><a href="{% url 'index' %}">Home</a></li>
-               <li><a href="{% url 'machines' %}">Machines</a></li>
-               <li><a href="{% url 'persos' %}">Personnel</a></li>
-               
-            </ul>
+            
+            
+            <ul class="nav justify-content-center">
+  <li class="nav-item">
+
+    <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Accueil</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="{% url 'machines' %}">Machines</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="{% url 'persos' %}">Personnel</a>
+  </li>
+ 
+</ul>
          {% endblock %} 
       {% endblock %}
-         <!-- On ajoute les images ici depuis les statics-->
-         {% load static %} 
-      <img src="{% static 'computerapp/images/logo_200px.png' %}"
-      alt="logo" style="width:200px;height:200px;">
-      <img src="{% static 'computerapp/images/logo2_200px.png' %}"
-      alt="logo2" style="width:200px;height:200px;">
+         
       {% block content %}
-      Blabla de la premiere page 
+      Bienvenue sur le site de R&T Development. Nous sommes une PME d'une vingtaine d'employés dont le coeur de métier est la prestation de services dans le réseau embarqué pour le spatial.</br>
+      Ici, vous pourrez administrer(visualiser, ajouter, supprimer) facilement les machines et les infrastructures de l'entreprise.</br>
+      Vous pourrez également connaître le propriétaire de la machine, mais aussi savoir quelles mises à jour ont été effectuées.</br> 
+      Vous pouvez dès à présent prendre en main le site via le menu en haut de la page.
       {% endblock %}
-      test
+      
       
    </body >
 </html >

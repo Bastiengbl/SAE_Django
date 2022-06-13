@@ -1,11 +1,20 @@
 {% extends "index.html" %} 
 
 {% block content %} 
-  <h1> Nom: {{ machine.nom }}</h1>
+<div  class="card" style="width: 18rem;">
+  <div style="background-color:   #bbbab0 " style="width:18rem"  class="card-header">
+  <b><u>Nom:</b></u> {{ machine.nom }}
+  </div>
+  <div style="background-color: #bbbab0 ">
+  <ul class="list-group list-group-flush">
+     <p><strong>ID</strong> : {{ machine.id }}</a></p>
+     <p><strong>Date de maintenance :</strong> {{machine.maintenaceDate}}</p>
+     <p><strong>Type de machine :</strong> {{ machine.mach }}</p>
+  </ul>
+  </div>
+</div>
+  
 
-  <p><strong>ID</strong> : {{ machine.id }}</a></p>
-  <p><strong>Date de maintenance :
-  </strong> {{machine.maintenaceDate}}</p>
-  <p><strong>Machine :
-  </strong> {{ machine.mach }}</p>
+  
+ 
 {% endblock %}
