@@ -1,8 +1,7 @@
-
 <!DOCTYPE html >
 <html lang="fr">
 
- <head> 
+ <head style="background-color:#93BBEE"> 
       {% block title %}
       <title> ACCUEIL </title>
       {% endblock %}
@@ -10,16 +9,9 @@
       <meta name="viewport"
       content="width=device-width ,
       initial-scale=1">
-      <!-- On ajoute un fichier CSS depuis les static -->
-      {% load static %}
-      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+      
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-
-   </head >
-   <body style="background-color:#93BBEE">
-     
-
-      {% block menu %}
+   {% block menu %}
       <!-- On ajoute une image depuis les static -->
       {% load static %} 
       <img src="{% static 'computerapp/images/rtdev.png' %}"
@@ -41,33 +33,30 @@
   <li class="nav-item">
    <a class="nav-link" href="{% url 'contact' %}">Contact</a>
  </li>
- 
-</ul>
-         {% endblock %} 
-      {% endblock %}
-{% load static %}
-<body>
-<b><u>Vous pouvez contacter notre PME via les liens suivants:</u></b><br>
-<br><u><br>Téléphone:</u> 06 03 97 28 96<br>
-<br><u>Adresses mail:</u> <br>
-<br>
-<button>
-<img src="/static/computerapp/images/gmail.png" width="40" height="40" alt="">
- <a href="mailto:gibelbastiengmail.com">Gmail</a> 
+ <li class="nav-item">
+    <a class="nav-link" href="{% url 'infos' %}">A propos</a>
+   </li>
+   </ul>
+ {% endblock %} 
+ {% endblock %} 
 
-</button>
-<button>
-<img src="/static/computerapp/images/outlook.png" width="43" height="40" alt="">
-<a href="mailto:fausseadressemail@outlook.com">Outlook</a><br>
+   </head >
+   <body style="background-color:#93BBEE">
+<u>R&T Development répond à vos questions sur notre entreprise et nos activités!</u><br>
+<br>
+<b>Quel est le secteur d'activité de R&T Development?</b><br>
+Notre secteur d'activité se concentre sur la prestation de services dans le réseau embarqué pour le spatial, comme expliqué dans notre présentation!<br>
+<br>
+<b>Combien d'employés avez-vous?</b><br>
+Nous avons actuellement une vingtaine d'employés dans notre PME.<br>
+<br>
+<b>Quand a été créé R&T Development?</b><br>
+R&T Development a été lancé en 2014, face à notre incompréhension vis à vis du manque de prestations disponibles dans le réseau.<br>
+<br>
+<b>Comment prenez-vous en charge les demandes des clients?</b><br>
+Les entreprises qui veulent travailler avec nous s'adressent directement via notre mail disponible sur notre site, ou viennent simplement à notre QG, situé à Chatellerault.<br>
 
-</button>
-<br>
-<br><u>Mon compte Linkedin:</u><br>
-<br>
-<br>
-<button>
-<img src="/static/computerapp/images/linkedin.jpg" width="43" height="40" alt="">
-<a href="https://fr.linkedin.com/in/bastien-gibel-2a27b6225" target="blank">Linkedin </a>
-</button>
-</div>
-</body>
+
+
+
+    

@@ -53,4 +53,9 @@ def machine_add_form(request):
 def about(request) :
     
     context = {}
-    return render(request, 'computerapp/about.html', context)
+    return render(request, 'computerapp/about.php', context)
+
+def faq(request) :
+    
+    context = {}
+    return render(request, 'computerapp/faq.html', context)

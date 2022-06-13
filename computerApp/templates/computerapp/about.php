@@ -1,3 +1,4 @@
+
 <!DOCTYPE html >
 <html lang="fr">
 
@@ -16,6 +17,13 @@
 
    </head >
    <body style="background-color:#93BBEE">
+    <script language="JavaScript" src="calendar.js"></script>
+<script language="JavaScript">
+
+
+
+var cal = new Calendar();
+</script>
      
 
       {% block menu %}
@@ -40,22 +48,44 @@
   <li class="nav-item">
    <a class="nav-link" href="{% url 'contact' %}">Contact</a>
  </li>
-</li>
-<li class="nav-item">
+ <li class="nav-item">
  <a class="nav-link" href="{% url 'infos' %}">A propos</a>
 </li>
  
 </ul>
          {% endblock %} 
       {% endblock %}
-         
-      {% block content %}
-      Bienvenue sur le site de R&T Development. Nous sommes une PME d'une vingtaine d'employés dont le coeur de métier est la prestation de services dans le réseau embarqué pour le spatial.</br>
-      Ici, vous pourrez administrer(visualiser, ajouter, supprimer) facilement les machines et les infrastructures de l'entreprise.</br>
-      Vous pourrez également connaître le propriétaire de la machine, mais aussi savoir quelles mises à jour ont été effectuées.</br> 
-      Vous pouvez dès à présent prendre en main le site via le menu en haut de la page.
-      {% endblock %}
-      
-      
-   </body >
-</html >
+{% load static %}
+<body>
+<b><u>Vous pouvez contacter notre PME via les liens suivants:</u></b><br>
+<br><u><br>Téléphone:</u> 06 03 97 28 96<br>
+<br><u>Adresses mail:</u> <br>
+<br>
+<button>
+<img src="/static/computerapp/images/gmail.png" width="40" height="40" alt="">
+ <a href="mailto:gibelbastiengmail.com">Gmail</a> 
+
+</button>
+<button>
+<img src="/static/computerapp/images/outlook.png" width="43" height="40" alt="">
+<a href="mailto:fausseadressemail@outlook.com">Outlook</a><br>
+
+</button>
+<br>
+<br><u>Mon compte Linkedin:</u><br>
+<br>
+<br>
+<button>
+<img src="/static/computerapp/images/linkedin.jpg" width="43" height="40" alt="">
+<a href="https://fr.linkedin.com/in/bastien-gibel-2a27b6225" target="blank">Linkedin </a>
+</button>
+</div>
+
+<script language="JavaScript" src="calendar.js"></script> 
+<script language="JavaScript">
+
+
+var cal = new Calendar();
+</script>
+
+</body>
