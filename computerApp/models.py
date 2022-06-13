@@ -14,14 +14,14 @@ class Machine(models.Model):
         primary_key = True,
         editable=False)
     nom=models.CharField(
-        max_length=6)
+        max_length=20)
     maintenaceDate = models.DateField(
         default = datetime.now())
     mach = models.CharField(
         max_length=32, choices=TYPE, default='PC')
 
     def __str__(self):
-        return str(self.id) + " ===> " + self.nom
+        return str(self.id) + " : " + self.nom
     
     def get_name(self):
         return str(self.id) + " " + self.nom
@@ -40,4 +40,4 @@ class Personnel(models.Model):
     
 
     def __str__(self):
-        return str(self.num_secu) + " ===> " + self.nom + " " + self.prenom
+        return str(self.num_secu) + ": " + self.nom + " " + self.prenom

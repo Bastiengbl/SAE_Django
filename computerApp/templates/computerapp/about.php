@@ -4,7 +4,7 @@
 
  <head> 
       {% block title %}
-      <title> ACCUEIL </title>
+      <title> CONTACT</title>
       {% endblock %}
       <meta charset="utf-8">
       <meta name="viewport"
@@ -51,6 +51,9 @@ var cal = new Calendar();
  <li class="nav-item">
  <a class="nav-link" href="{% url 'infos' %}">A propos</a>
 </li>
+<li class="nav-item">
+   <a class="nav-link" href="/admin">Administration</a>
+  </li>
  
 </ul>
          {% endblock %} 

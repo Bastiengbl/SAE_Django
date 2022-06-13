@@ -1,7 +1,7 @@
 {% extends "index.html" %}
 
 {% block title %}
-<title> liste_personnes </title>
+<title> Liste du Personnel </title>
 {% endblock %}
 
 {% block content %} 
@@ -10,11 +10,12 @@
    <ul>
      {% for Personne in persos  %}
      <div class="list-group" >
-      <a href="{% url 'persos-detail' Personne.num_secu %}" class="list-group-item list-group-item-action" style="background-color:#bbbab0" > {{machine.nom}}</br> ({{Personne.nom}}) {{Personne.prenom}}</a>
+      <a href="{% url 'persos-detail' Personne.num_secu %}" class="list-group-item list-group-item-action" style="background-color:#57f8d8" > {{machine.nom}}</br> ({{Personne.nom}}) {{Personne.prenom}}</a>
      </br>
      
     {% endfor %} 
    </ul>
+   <li><a href="/admin/computerApp/personnel">Ajouter un personnel</a></li>
    {% else %} 
       <p>Il n'y a pas de Personnel.</p>
    {% endif %} 
