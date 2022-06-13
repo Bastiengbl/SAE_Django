@@ -5,14 +5,14 @@
 {% endblock %}
 
 {% block content %} 
-   <h1>Liste des Personnes</h1>
+   <h1>Liste du personnel:</h1>
    {% if persos %} 
    <ul>
      {% for Personne in persos  %}
-      <li>
-         <a href="{% url 'persos-detail' Personne.num_secu %}">
-         {{ Personne.num_secu }} ({{Personne.nom}}) {{Personne.prenom}}
-      </li>
+     <div class="list-group" >
+      <a href="{% url 'persos-detail' Personne.num_secu %}" class="list-group-item list-group-item-action" style="background-color:#bbbab0" > {{machine.nom}}</br> ({{Personne.nom}}) {{Personne.prenom}}</a>
+     </br>
+     
     {% endfor %} 
    </ul>
    {% else %} 

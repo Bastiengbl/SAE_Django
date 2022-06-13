@@ -49,3 +49,8 @@ def machine_add_form(request):
     context = {'form': form}
     return render(request,
      'computerapp/machine_add.html',context)
+
+def about(request) :
+    
+    context = {}
+    return render(request, 'computerapp/about.html', context)
